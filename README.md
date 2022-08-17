@@ -13,42 +13,40 @@
   
 4. Open Visual Studio Code
  
-4a. 
-- Go to the source control to click "Download Git for Windows" which will redirect you to https://git-scm.com/download/win <br>
-    ![image](https://user-images.githubusercontent.com/81631818/184920978-a96c31fc-294a-4079-b024-993df7532fb4.png)
-
-- Download Git (https://git-scm.com/download/win) <br>
+5. Go to the source control in Visual Studio Code. Click "Download Git for Windows" which will redirect you to https://git-scm.com/download/win and download Git <br>
+  ![image](https://user-images.githubusercontent.com/81631818/184920978-a96c31fc-294a-4079-b024-993df7532fb4.png)
   ![image](https://user-images.githubusercontent.com/81631818/184964583-db11f457-be82-416a-a5e9-6fc0d8ec4d46.png)
 
-4b. (checkout for private repositories: https://docs.github.com/en/codespaces/getting-started/quickstart)
-- Go to extensions and search for "github" and then install the "GitHub Codespaces" extension. <br>
-  ![image](https://user-images.githubusercontent.com/81631818/184967426-036f41ba-8ee9-4bb2-9ec8-3e1f6f4f383e.png)
+6. Go to Github in the browser > repository main page > download the repository as a zip
+  ![image](https://user-images.githubusercontent.com/81631818/185182918-8f110c33-56ce-4d2b-86b5-3e374b9fbf15.png)
+  
+7. Unzip the folder through right cilck > extract all
 
-- Once installed, go to remote explorer and sign into GitHub. <br>
-  ![image](https://user-images.githubusercontent.com/81631818/184976529-ccb7288a-8de3-44e7-b8a5-36eaa98b3484.png)
 
-- Click "allow" <br>
-  ![image](https://user-images.githubusercontent.com/81631818/184977137-ad2efee6-0faf-45f8-8bb4-6c5e2f63b985.png)
+8. Go to Visual Studio Code and click "Open folder". <br>
+  ![image](https://user-images.githubusercontent.com/81631818/185180632-3f89d857-ec62-47f3-8571-3d3e92bfc2a8.png)
+  
+9. Select the unzipped folder <br>
+  ![image](https://user-images.githubusercontent.com/81631818/185185795-c59b333e-14fc-4270-b9bd-91c44c437b36.png)
 
-- Click "open" <br>
-  ![image](https://user-images.githubusercontent.com/81631818/184977273-84be4d74-18d6-455e-9288-bbd1cfb57a9d.png)
+10. Files can now be found in Visual Studio Code's file explorer
+    ![image](https://user-images.githubusercontent.com/81631818/185185014-1287e18f-46e7-4362-a8d0-fab70566dc09.png)
 
-- Click "open" <br>
-  ![image](https://user-images.githubusercontent.com/81631818/184977412-0fb8d246-7072-4457-8ecd-2318e5b5470b.png)
+11. If you change something in one of the files and save it, it'll be shown in Visual Studio Code's source control. You might have to click "initialize repository" before the files that have saved changes are shown.
+  ![image](https://user-images.githubusercontent.com/81631818/185186326-79c5ff8e-2bff-4512-a6bd-a0a36a3626cc.png)
+  ![image](https://user-images.githubusercontent.com/81631818/185186862-4e90eef3-abcb-4d56-a33b-5e322697cb46.png)
 
-- You are now logged into GitHub through Visual Studio Code. Click the + to create a new codespace. <br>
-  ![image](https://user-images.githubusercontent.com/81631818/184977668-963d4d31-82db-4b12-822a-f958373a66ba.png)
+12. Click the plus to stage the changes
+  ![image](https://user-images.githubusercontent.com/81631818/185187361-8144482f-c83b-487f-8058-5bd01d133165.png)
 
-- (public repository ??) Search for your repository in the search box that shows. <br>
-  ![image](https://user-images.githubusercontent.com/81631818/184977937-e5049be9-3b3e-4a01-b052-42a9452182ef.png)
+13. Click the arrow and then click "commit & push"
+  ![image](https://user-images.githubusercontent.com/81631818/185188606-cabab3a7-a31c-42d4-881f-0fc49f10328e.png)
+  
+14. Your changes can now be seen in GitHub commits.
+![image](https://user-images.githubusercontent.com/81631818/185189166-a6ce7604-c485-486b-ab10-f640c22e6263.png)
 
-- (private repository ??) Go to the main page of your repository in the web browser. Click "branches".
-  ![image](https://user-images.githubusercontent.com/81631818/184979126-2fd2f116-d3ff-49d1-bc41-4bc87b4f72af.png)
+  
 
--  Select the branch you want to create a codespace from.
-  ![image](https://user-images.githubusercontent.com/81631818/184979792-921c4496-21e3-44be-9df9-b9bdaf48db92.png)
-
-- 
 
 
 

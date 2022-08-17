@@ -41,6 +41,13 @@
 
 13. Click the arrow and then click "commit & push" <br>
   ![image](https://user-images.githubusercontent.com/81631818/185188606-cabab3a7-a31c-42d4-881f-0fc49f10328e.png)
+  <br>
+  If it's the first time that you use Git you'll get the following error <br>
+  ![image](https://user-images.githubusercontent.com/81631818/185192396-c1806d0d-017c-4f0f-872d-3d182c72229c.png)
+  <br>
+  If that's the case go to https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup and follow the instructions. The commands should be written without the   "$" if using the terminal in Visual Studio Code. <br>
+  ![image](https://user-images.githubusercontent.com/81631818/185193497-eec1c577-b79c-401d-b0cc-a0e69be48dcb.png)
+  ![image](https://user-images.githubusercontent.com/81631818/185196212-72bcb711-2298-4182-af33-e2e05efedf4d.png)
   
 14. Your changes can now be seen in GitHub commits. <br>
 ![image](https://user-images.githubusercontent.com/81631818/185189166-a6ce7604-c485-486b-ab10-f640c22e6263.png)

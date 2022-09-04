@@ -48,30 +48,6 @@
             </div>
           </div>
         </div>
-        <div class="<?php echo $divCardColumnBreakpoints ?>">
-          <div class="card p-3">
-            <figure class="p-3 mb-0">
-              <blockquote class="blockquote">
-                <p>A well-known quote, contained in a blockquote element.</p>
-              </blockquote>
-              <figcaption class="<?php echo $blockquoteFooterProperties ?>">
-                Someone famous in <cite title="Source Title">Source Title</cite>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-        <div class="<?php echo $divCardColumnBreakpoints ?>">
-          <div class="card bg-primary text-white text-center p-3">
-            <figure class="mb-0">
-              <blockquote class="blockquote">
-                <p>A well-known quote, contained in a blockquote element.</p>
-              </blockquote>
-              <figcaption class="<?php echo $blockquoteFooterProperties ?>">
-                Someone famous in <cite title="Source Title">Source Title</cite>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
       <?php } ?> 
     </div>
   </main>

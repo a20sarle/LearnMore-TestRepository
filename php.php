@@ -5,12 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <!-- CDNs (Content Delivery Networks) used -->
   <!-- bootstrap only css -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <!-- bootstrap JavaScript Bundle with Popper for masonry -->
   <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
   <!-- JavaScript Bundle with Popper for modal -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -26,8 +29,56 @@
       }
     }
   </style>
+  <script>
+    // do this on site load
+    $(document).ready(function(){
+
+      // Fetch all elements with class 'link'
+
+      var elems = document.querySelectorAll('.link');
+
+      // Add clickListener to all elemnts with class 'link'
+      // and when one of those elements are clicked, write out its 
+      // index position and value of attribute "name" in the console
+
+      elems.forEach(function (elem, i){
+        elem.addEventListener("click", function(){
+
+          // Details of the nodes
+
+          console.log('This element has...');
+          console.log(' attribute: name="'+this.name);
+          console.log(' index position: ' + i);
+          console.log(' tag text: ' + this.innerText);
+
+          // Make different things happen depending on the link
+          // clicked
+          
+          if ( this.name == 'link1' ) 
+          {
+            console.log(' inside if-statement of "link1"');
+          }
+          else if ( this.name == 'link2' ) 
+          {
+            console.log(' inside if-statement of "link2"');
+          }
+          else
+          { 
+            console.log(' This is NOT link1 or link2.');
+          }
+
+        });
+      });    
+
+    });
+  </script>
 </head>
 <body>
+
+  <a class="link" name="link1">Link 1</a>
+  <a class="link" name="link2">Link 2</a>
+  <a class="link" name="link3">Link 3</a>
+  <a class="link" name="link3">Link 4</a>
 
   <?php
     $divCardColumnBreakpoints = "col-sm-6 col-lg-4 mb-4";

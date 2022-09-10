@@ -12,8 +12,6 @@
   <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
   <!-- JavaScript Bundle with Popper for modal -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-  <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -29,111 +27,69 @@
       }
     }
   </style>
-  <script>
-    // do this on site load
-    $(document).ready(function(){
-
-      // Fetch all elements with class 'link'
-
-      const elems = document.querySelectorAll('.link');
-
-      // Add clickListener to all elements in array "elems" and
-      // get the entry/index of every item in array "elems" before
-      // calling function "getNodeDetails" where the clicked node (this)
-      // is sent together with it's index position (index)
-
-      for (const [index] of elems.entries()) {
-        elems[index].addEventListener('click', function()
-        {
-          getNodeDetails(index, this);
-        })
-      }
-
-    });
-
-    function getNodeDetails(index, node) {      
-
-      // Details of the nodes
-
-      console.log('This element has...');
-      console.log(' attribute: name="'+node.name+'"');
-      console.log(' index position: ' + index);
-      console.log(' tag text: ' + node.innerText);
-
-      // Make different things happen depending on the link
-      // clicked
-
-      if ( this.name == 'link1' ) 
-      {
-        console.log(' inside if-statement of "link1"');
-      }
-      else if ( this.name == 'link2' ) 
-      {
-        console.log(' inside if-statement of "link2"');
-      }
-      else
-      { 
-        console.log(' This is NOT link1 or link2.');
-      }
-
-    }
-  </script>
 </head>
 <body>
-
-  <a class="link" name="link1">Link 1</a>
-  <a class="link" name="link2">Link 2</a>
-  <a class="link" name="link3">Link 3</a>
-  <a class="link" name="link3">Link 4</a>
 
   <?php
     $divCardColumnBreakpoints = "col-sm-6 col-lg-4 mb-4";
     $blockquoteFooterProperties = "blockquote-footer mb-0 text-muted";
-    $timesToPrintUsingLoop = 4;
+    $timesToPrintUsingLoop = 3;
   ?>
 
-  <?php for($i = 0; $i < $timesToPrintUsingLoop; $i++) { ?>
-    <div class="modal fade" id="exampleModalToggle<?php echo $i?>" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalToggleTitleLabel">Modal 1.<?php echo $i?></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            Show a second modal (1.<?php echo $i?>) and hide this one with the button below.
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2<?php echo $i?>" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal (1.<?php echo $i?>)</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  <?php } ?>
-
-  <?php for($i = 0; $i < $timesToPrintUsingLoop; $i++) { ?>
-    <div class="modal fade" id="exampleModalToggle2<?php echo $i?>" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalTitleToggleLabel2">Modal 2 (1.<?php echo $i?>)</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            Hide this modal and show the first with the button below.
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-primary" data-bs-target="#exampleModalToggle<?php echo $i?>" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first (1.<?php echo $i?>)</button>
+  <main class="container py-5">
+   <div class="row" data-masonry='{"percentPosition": true }'>
+      <?php for($i = 0; $i < $timesToPrintUsingLoop; $i++) { ?>
+        <div class="<?php echo $divCardColumnBreakpoints ?>">
+          <div class="card">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#868e96"/>
+              <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
+            </svg>
+            <div class="card-body">
+              <h5 class="card-title">Card title that wraps to a new line</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
           </div>
         </div>
-      </div>
+      <?php } ?> 
     </div>
-  <?php } ?>
+  </main>
 
   <main class="container py-5">
-    <div class="row" data-masonry='{"percentPosition": true }'>
-      <?php for($i = 0; $i < $timesToPrintUsingLoop; $i++) { ?> 
-        <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle<?php echo $i?>" role="button">Open first modal <?php echo $i?></a>      
+   <div class="row" data-masonry='{"percentPosition": true }'>
+      <?php for($i = 0; $i < $timesToPrintUsingLoop; $i++) { ?>
+        <div class="<?php echo $divCardColumnBreakpoints ?>">
+          <div class="card p-3">
+            <figure class="p-3 mb-0">
+              <blockquote class="blockquote">
+                <p>A well-known quote, contained in a blockquote element.</p>
+              </blockquote>
+              <figcaption class="<?php echo $blockquoteFooterProperties ?>">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      <?php } ?> 
+    </div>
+  </main>
+
+  <main class="container py-5">
+   <div class="row" data-masonry='{"percentPosition": true }'>
+      <?php for($i = 0; $i < $timesToPrintUsingLoop; $i++) { ?>
+        <div class="<?php echo $divCardColumnBreakpoints ?>">
+          <div class="card bg-primary text-white text-center p-3">
+            <figure class="mb-0">
+              <blockquote class="blockquote">
+                <p>A well-known quote, contained in a blockquote element.</p>
+              </blockquote>
+              <figcaption class="<?php echo $blockquoteFooterProperties ?>">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
       <?php } ?> 
     </div>
   </main>

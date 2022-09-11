@@ -45,7 +45,7 @@
             // index would be -1 it'd mean that the specified text would not
             // exist in the string that is tested. In this case the tested 
             // string is the browser URL as 
-            // window.location.href = the current page's browser URL.
+            // window.location.href = the current page's browser URL. 
 
             if(window.location.href.indexOf(lastPartOfUrl) != -1) {
                 $(lastPartOfUrl).modal('show');

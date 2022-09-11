@@ -12,6 +12,46 @@
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
     <!-- JavaScript Bundle with Popper for modal -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+        // If the URL ends with "#exampleModalToggle20" then open this modal
+        // comming: open modal if the URL contains a "modalID"
+
+        $(document).ready(function() 
+        {
+
+            // Fetch full browser url (it's returned as a string)
+
+            var browserUrl = window.location.href;
+
+            // Find the last slash in the browser url using regEx
+
+            //      * '/' -- '/' signals the start and end of the regEx
+            //      * '\/' matches a slash </> character
+            //      * '(' -- ')' signals the start and end of a group to be captured
+            //      * '[^' -- ']' signals exclusion of the '/' when the group if fetched
+            //      * '+' match 1 or 1+ of the following
+            //      * '?' match 0 or 1 of the following
+            //      * '$' find the end of the string
+
+            // ...and [1] fetchs the captured group.
+
+            var lastPartOfUrl = browserUrl.match(/\/([^\/]+)\/?$/)[1];
+
+            // indexOf() fetch the index (datatype: int) of "lastPartOfUrl"
+            // and != -1 means if the index is anything else but -1. If the
+            // index would be -1 it'd mean that the specified text would not
+            // exist in the string that is tested. In this case the tested 
+            // string is the browser URL as 
+            // window.location.href = the current page's browser URL.
+
+            if(window.location.href.indexOf(lastPartOfUrl) != -1) {
+                $(lastPartOfUrl).modal('show');
+            }
+        });
+  </script>
 </head>
 <body>
 

@@ -46,7 +46,6 @@
             // exist in the string that is tested. In this case the tested 
             // string is the browser URL as 
             // window.location.href = the current page's browser URL.
-            // test change
 
             if(window.location.href.indexOf(lastPartOfUrl) != -1) {
                 $(lastPartOfUrl).modal('show');
